@@ -1,0 +1,2 @@
+<p *ngIf="art$ | async as a; else faux">Article : {{a.titre}}</p>
+<ng-template #faux><p>L'article {{id}} n'a pas pu etre récupéré !</p></ng-template>

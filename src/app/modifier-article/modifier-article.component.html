@@ -1,0 +1,19 @@
+<div *ngIf="articleForm">
+<form [formGroup]="articleForm" (ngSubmit)="updateArticle()">
+
+    <label>Id</label>
+    <input type="text" id="id" formControlName="id">
+
+    <label>Titre</label>
+    <input type="text" id="titre" formControlName="titre">
+
+    <label>Date</label>
+    <input type="date" id="date" formControlName="date">
+
+    <label>Contenu</label>
+    <input type="text" id="contenu" formControlName="contenu">
+
+
+    <button type="submit">Valider</button>
+</form>
+</div>

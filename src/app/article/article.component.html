@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Date</th>
+        <th scope="col">Contenu</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of listeA$ | async">
+        <th scope="row">{{a.id}}</th>
+        <td>{{a.titre}}</td>
+        <td>{{a.date}}</td>
+        <td>{{a.contenu}}</td>
+        <td>
+          <button (click)="supprimer(a.id)">Supprimer</button>
+          <button (click)="modifier(a.id)">Modifier</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

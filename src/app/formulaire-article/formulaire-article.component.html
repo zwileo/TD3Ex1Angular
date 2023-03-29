@@ -1,0 +1,23 @@
+<form [formGroup]="articleForm">
+
+    <label>Id</label>
+    <input type="text" id="id" formControlName="id">
+
+    <label>Titre</label>
+    <input type="text" id="titre" formControlName="titre">
+
+    <!-- <label>Date</label>
+    <input type="date" id="date" formControlName="date"> -->
+
+    <label>Contenu</label>
+    <input type="text" id="contenu" formControlName="contenu">
+
+    <div *ngIf="articleFormComplet$ | async as art; else faux">
+        <button type="submit" [disabled]="!articleForm.valid" (click)="saveArticle(art)">Valider</button>
+    </div>
+    <ng-template #faux>
+        <button type="submit">Article Invalide</button>
+    </ng-template>
+
+    <p>Status du formulaire : {{articleForm.status}}</p>
+</form>
