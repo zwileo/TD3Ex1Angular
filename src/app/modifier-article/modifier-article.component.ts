@@ -20,7 +20,7 @@ export class ModifierArticleComponent implements OnInit {
     this.ide = this.ar.snapshot.params['id'];    
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {                           //data nom de variable aléatoire pour dire qu'on repren les données de cette fonction
     this.as.getArticleById(this.ide).subscribe(data => {
       this.articleForm = this.fb.group({
         id:[data.id, Validators.required],

@@ -20,6 +20,9 @@ export class ArticleComponent implements OnInit {
     this.listeA$ = this.as.getArticles();
   }
 
+
+  
+
   supprimer(id:number)
   {
     this.as.delete(id).subscribe();
